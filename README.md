@@ -1,5 +1,8 @@
 # madamePee
+
+/***********************************************************************************************************************************/
 Ici sont stockés et mis à jour les fichiers relatifs à la personnalisation du style du site de MadamePee
+/***********************************************************************************************************************************/
 
 Le fichier min_save.css concerne les modifications du fichier du thème assets/css/responsive.min.css
 
