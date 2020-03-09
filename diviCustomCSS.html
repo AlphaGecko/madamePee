@@ -1108,21 +1108,21 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		align-content: center;
 	}
 	
 	#partenaires_soutiens_supercontainer div:nth-child(n) {
 		display: flex;
-		justify-content: center;
+		justify-content: space-around;
 		align-items: center;
 	}
 	
 	#partenaires_soutiens_supercontainer div:nth-child(1) {
-		width: 10vw;
+		width: 10vw !important;
 	}
 	
 	#partenaires_soutiens_supercontainer div:nth-child(2), #partenaires_soutiens_supercontainer div:nth-child(3), #partenaires_soutiens_supercontainer div:nth-child(4), #partenaires_soutiens_supercontainer div:nth-child(5) {
-		width: 20vw;
+		width: 20vw !important;
+		max-width: 20vw !important;
 	}
 
 	#partenaires_soutiens_supercontainer div {
@@ -1130,31 +1130,34 @@
 		margin: 0 0 !important;
 	}
 	
-	#partenaires_soutiens_3, #partenaires_soutiens_7 {
-		max-width: 100px;
+	#partenaires_soutiens_3 img, #partenaires_soutiens_7 img {
+		max-width: 100px !important;
 	}
 	
 	@media screen and (max-width: 980px) {
 		
-		#partenaires_soutiens_3, #partenaires_soutiens_7 {
-			max-width: inherit;
-		}
-
-		#partenaires_soutiens_1, #partenaires_soutiens_2, #partenaires_soutiens_3, #partenaires_soutiens_4, #partenaires_soutiens_5, #partenaires_soutiens_6, #partenaires_soutiens_7, #partenaires_soutiens_8, #partenaires_soutiens_9 {
-			display: inherit;
-		}
-
-		#partenaires_soutiens_supercontainer div:nth-child(1), #partenaires_soutiens_supercontainer div:nth-child(2), #partenaires_soutiens_supercontainer div:nth-child(3), #partenaires_soutiens_supercontainer div:nth-child(4), #partenaires_soutiens_supercontainer div:nth-child(5) {
-			display: inherit;
+		#partenaires_soutiens_supercontainer {
+			flex-direction: column;
 		}
 
 		#partenaires_soutiens_supercontainer div:nth-child(1) {
-			width: inherit;
+			width: auto !important;
 		}
 
 		#partenaires_soutiens_supercontainer div:nth-child(2), #partenaires_soutiens_supercontainer div:nth-child(3), #partenaires_soutiens_supercontainer div:nth-child(4), #partenaires_soutiens_supercontainer div:nth-child(5) {
-			width: inherit;
+			width: auto !important;
+			max-width: inherit !important;
 		}
+
+
+		#partenaires_soutiens_3 img, #partenaires_soutiens_7 img {
+			max-width: inherit !important;
+		}
+		
+		#partenaires_soutiens_supercontainer img {
+			width: 150px !important;
+		}
+		
 	}
 
 
