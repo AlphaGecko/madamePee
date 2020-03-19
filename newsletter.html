@@ -9,18 +9,34 @@
     
     <p>
         <label>
-            <input name="AGREE_TO_TERMS" type="checkbox" value="1" required> <a href="https://madamepee.com/mentions-legales/" target="_blank">J'ai lu et accepté la politique de confidentialité</a>
+            <input name="AGREE_TO_TERMS" type="checkbox" value="1" required> 
+              <a href="https://madamepee.com/mentions-legales/" target="_blank">
+             	 <span id="policy"></span>
+              </a>
         </label>
     </p>
     
     <p>
-        <br /><input type="submit" value="ENVOYER" />
+        <br />
+        <input type="submit" value="ENVOYER" id="send" />
     </p>
       
       <script>
-    
-        document.querySelector('#newsletter #email').placeholder = 'Je viens du DOM via javascript, FRANCAIS';
-        document.querySelector('#newsletter_eng #email').placeholder = 'Je viens du DOM via javascript, ANGLAIS';
+        
+        (function() {
+           if (document.getElementById('newsletter') !== null) {
+             
+            document.querySelector('#newsletter #email').placeholder = 'Adresse E-mail';
+            document.querySelector('#newsletter #policy').innerHTML = 'J\'ai lu et accepté la politique de confidentialité';
+            document.querySelector('#newsletter #send').value = 'ENVOYER';
+            
+          } else if (document.getElementById('newsletter_eng') !== null) {
+            
+            document.querySelector('#newsletter_eng #email').placeholder = 'Email';
+            document.querySelector('#newsletter_eng #policy').innerHTML = 'I have read and I accept the confidential policy';
+            document.querySelector('#newsletter_eng #send').value = 'SEND';
+          }   
+        })()
     
       </script>
       

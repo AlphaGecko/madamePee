@@ -5,6 +5,11 @@
 	/*******************/
 	/***** General *****/
 	/*******************/
+	
+	body {
+		margin: 0 0 !important; 
+		padding: 0 0 !important;
+	}
 
 
 
@@ -61,6 +66,12 @@
 
 	#homepage_main_image > div.et_pb_row.et_pb_row_0.et_had_animation {
 		margin-top: 40vh !important;
+	}
+	
+	@media screen and (max-width: 768px) {
+		#homepage_main_image > div.et_pb_row.et_pb_row_0.et_had_animation {
+			margin-top: inherit !important;
+		}
 	}
 
 
@@ -254,7 +265,7 @@
 
 	footer .container {
 		position: relative !important;
-		margin: 0 0 30px 0 !important;
+		margin: 0 0 0 0 !important;
 		width: 100% !important;
 		max-width: inherit !important;
 		padding-right: 5% !important;
@@ -356,9 +367,13 @@
 
 	#footer-widgets > div:nth-child(4) {
 		width: 100% !important;
+		min-height: 50px !important; 
+		margin-top: 25px !important;
+		margin-bottom: 25px !important;
 		text-align: center;
-		margin-top: auto !important;
-		margin-bottom: auto !important;
+		display: flex; 
+		align-items: center;
+		align-content: center;
 	}
 
 
@@ -381,7 +396,6 @@
 
 	p.other_anchors {
 		width: 50% !important;
-		padding: 10px 0 0 0 !important;
 	}
 
 	.other_anchors a {
@@ -521,10 +535,55 @@
 		width: 150px;
 		max-width: 9vw;
 	}
+	
+	#urinoire_chrono_container, 
+	#urinoire_hand_container,
+	#urinoire_light_container,
+	#urinoire_poo_container,
+	#urinoire_tear_container,
+	#urinoire_lock_container, 
+	#urinoire_wrench_container  {
+		display: flex !important; 
+		align-items: center !important; 
+		align-content: center !important;
+	}
+	
+	#urinoire_chrono_container > div.et_pb_column.et_pb_column_2_3.et_pb_column_13.et_pb_css_mix_blend_mode_passthrough.et-last-child > div, 
+	#urinoire_hand_container > div.et_pb_column.et_pb_column_2_3.et_pb_column_13.et_pb_css_mix_blend_mode_passthrough.et-last-child > div,
+	#urinoire_light_container > div.et_pb_column.et_pb_column_2_3.et_pb_column_13.et_pb_css_mix_blend_mode_passthrough.et-last-child > div,
+	#urinoire_poo_container > div.et_pb_column.et_pb_column_2_3.et_pb_column_13.et_pb_css_mix_blend_mode_passthrough.et-last-child > div,
+	#urinoire_tear_container > div.et_pb_column.et_pb_column_2_3.et_pb_column_13.et_pb_css_mix_blend_mode_passthrough.et-last-child > div,
+	#urinoire_lock_container > div.et_pb_column.et_pb_column_2_3.et_pb_column_13.et_pb_css_mix_blend_mode_passthrough.et-last-child > div, 
+	#urinoire_wrench_container > div.et_pb_column.et_pb_column_2_3.et_pb_column_13.et_pb_css_mix_blend_mode_passthrough.et-last-child > div {
+		display: flex !important; 
+		align-items: center !important; 
+		align-content: flex-start !important;
+		min-height: inherit !important;	
+	}
+	
+	#urinoire_chrono_container p, 
+	#urinoire_hand_container p,
+	#urinoire_light_container p,
+	#urinoire_poo_container p,
+	#urinoire_tear_container p,
+	#urinoire_lock_container p, 
+	#urinoire_wrench_container p {
+		text-align: left !important;
+	}
 
 
 	@media screen and (max-width: 980px) {
-
+		
+		#urinoire_hand_container > div.et_pb_column.et_pb_column_2_3.et_pb_column_13.et_pb_css_mix_blend_mode_passthrough.et-last-child > div,
+	#urinoire_light_container > div.et_pb_column.et_pb_column_2_3.et_pb_column_13.et_pb_css_mix_blend_mode_passthrough.et-last-child > div,
+	#urinoire_poo_container > div.et_pb_column.et_pb_column_2_3.et_pb_column_13.et_pb_css_mix_blend_mode_passthrough.et-last-child > div,
+	#urinoire_tear_container > div.et_pb_column.et_pb_column_2_3.et_pb_column_13.et_pb_css_mix_blend_mode_passthrough.et-last-child > div,
+	#urinoire_lock_container > div.et_pb_column.et_pb_column_2_3.et_pb_column_13.et_pb_css_mix_blend_mode_passthrough.et-last-child > div, 
+	#urinoire_wrench_container > div.et_pb_column.et_pb_column_2_3.et_pb_column_13.et_pb_css_mix_blend_mode_passthrough.et-last-child > div {
+		display: inherit !important; 
+	}
+		
+		
 		#urinoire_chrono_container,
 		#urinoire_hand_container,
 		#urinoire_light_container,
@@ -533,6 +592,16 @@
 		#urinoire_lock_container, 
 		#urinoire_wrench_container {
 			display: inherit !important;
+		}
+		
+		#urinoire_chrono_container p, 
+		#urinoire_hand_container p,
+		#urinoire_light_container p,
+		#urinoire_poo_container p,
+		#urinoire_tear_container p,
+		#urinoire_lock_container p, 
+		#urinoire_wrench_container p {
+			text-align: center !important;
 		}
 		
 		.urinoire_icone img {
@@ -861,9 +930,7 @@
 
 	@media screen and (max-width: 680px) {
 		#histoire_mot_child {
-			top: -85px;
-			min-width: 340px !important;
-			max-width: 450px !important;
+			min-width: 300px!important;
 		}
 	}
 
@@ -979,16 +1046,27 @@
 		}
 
 	}
+	
+	
+	
+	/* Gestion de l'overflow */ 
+	
+	
+	
+	
+	#histoire_bloc1_supercontainer {
+		overflow-x: hidden;
+	}
 
 
 
 	/***************************/
 	/***** Nos partenaires *****/
 	/***************************/
-
-
-
-	/* images du haut */
+	
+	
+	
+		/* images et texte du haut */
 	
 	#partenaires1_images_container {
 		max-width: 800px !important;
@@ -1017,6 +1095,10 @@
 	
 
 	@media screen and (max-width: 768px) {
+		
+		#partenaires_first_text {
+			max-width: 80% !important;
+		}
 		
 		#partenaires1_images_container {
 			max-width: inherit !important;
@@ -1057,8 +1139,65 @@
 		}
 	}
 	
-	/* textes du haut, responsive */ 
 	
+	/* photo au top */
+	
+	
+	
+	
+	#partenaires_image_top img {
+		width: 1080px !important;
+	}
+	
+	@media screen and (max-width: 1380px) {
+		
+		#partenaires_image_top  {
+			width: 100% !important;
+		}
+		
+		#partenaires_image_top img, #partenaires_image_top span, #partenaires_image_top div {
+			width: 100% !important;
+			min-width: 100% !important;
+		}
+	}
+	
+	@media screen and (max-width: 768px) {
+		#partenaires_image_top_container {
+			min-width: 100% !important;
+		}
+	}
+	
+
+	
+	/* images et textes */ 
+	
+	
+	
+	.partenaires_container {
+		display: flex;
+		align-items: center; 
+		justify-content: space-between;
+	}
+	
+	@media screen and (max-width: 980px) {
+		.partenaires_container {
+			flex-direction: column;
+		}
+		
+		.partenaires_container .et_pb_image_4, .partenaires_container .et_pb_image_5, .partenaires_container .et_pb_image_6 {
+			text-align: center !important;
+		}
+	}
+
+
+	
+	/* Suppression des margin et padding inutiles */ 
+	
+	.solution_supercontainer {
+		min-height: inherit !important;
+	}
+	
+
 	@media screen and (max-width: 768px) {
 		
 		.partenaires_supercontainer div.et_pb_row.et_pb_row_2 {
@@ -1178,23 +1317,32 @@
 		margin-left: auto !important;
 		margin-right: auto !important;
 	}
+	
+	#contact_map_container h1 {
+		font-size: 2em !important;
+	}
+	
+	#contact_map_madamepee > div > h2:nth-child(2) > strong > span {
+		font-size: 80% !important;
+	}
 
 	#contact_map_madamepee {
 		position: absolute;
-		left: -110px;
-		bottom: 60px;
+		right: -110px;
+		bottom: 25%;
+		max-height: 60% !important;
 	}
 
 	@media screen and (max-width: 1200px) {
 		#contact_map_madamepee {
-			left: -70px;
+			right: -70px;
 		}
 	}
 
 	@media screen and (max-width: 768px) {
 		#contact_map_madamepee {
 			position: inherit;
-			left: inherit;
+			right: inherit;
 			bottom: inherit;
 			margin-left: auto !important;
 			margin-right: auto !important;
@@ -1289,8 +1437,17 @@
 	}
 
 	@media screen and (max-width: 600px) {
+		
+		#contact_map_container {
+			width: 100% !important;
+		}
+		
+		#contact_formulaire_container {
+			padding-bottom: 0 !important;	
+		}
+		
 		#contact_formulaire {
-			width: 95% !important;
+			width: 100% !important;
 		}
 	}
 
@@ -1507,11 +1664,11 @@
 	}
 	
 	#solution_love_green_container{
-		background-color: rgba(254,0,0,0.4);
+		background-color: rgba(254,0,0,0.4) !important;
 		padding: 0 0 !important;
 	}
 	
-	#solution_love_green_container > div.et_pb_column.et_pb_column_1_2.et_pb_column_38.et_pb_css_mix_blend_mode_passthrough.et-last-child {
+	#solution_love_green_container > div {
 		background-color: rgba(0,0,0,0) !important;
 	}
 	
@@ -1522,6 +1679,65 @@
 	.solution_texte p, .solution_texte em {
 		line-height: 1.5em !important; 
 	}
+	
+	
+	
+	
+	/* photo top */ 
+	
+	
+	
+	
+	#solution_photo_container {
+		margin-bottom: 20px;
+	}
+	
+	
+	
+	/* bloc rose */ 
+	
+	
+	
+	#solution_pink_container {
+		padding-top: 0 !important;
+	}
+	
+	#solution_etions_container {
+		padding-top: 0 !important; 
+	}
+	
+	#solution_etions_container > div {
+		width: 100% !important; 
+		height: 100% !important; 
+		position: relative !important; 
+		padding: 0 0 !important; 
+		margin: 0 0 !important; 
+	}
+	
+	#solution_etions_child {
+		position: absolute !important; 
+		left: 50% !important; 
+		top: -50% !important; 
+		display: flex; 
+		align-items: center; 
+		justify-content: center;
+		
+		transform: translateX(-50%) !important;
+		-webkit-transform: translateX(-50%) !important;
+		-o-transform: translateX(-50%) !important;
+		-moz-transform: translateX(-50%) !important;
+		-ms-transform: translateX(-50%) !important;
+		
+	}
+	
+	@media screen and (max-width: 768px) {
+			#solution_etions_child {
+				top: 0 !important;
+				width: 100% !important; 
+		}
+	}
+	
+	
 	
 	/* bloc sanitaire */ 
 	
