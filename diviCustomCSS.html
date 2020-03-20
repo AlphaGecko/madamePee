@@ -24,6 +24,8 @@
 			font-size: 70%;
 		}
 	}
+	
+	
 
 
 
@@ -64,14 +66,42 @@
 
 
 
+	
 	#homepage_main_image > div.et_pb_row.et_pb_row_0.et_had_animation {
 		margin-top: 40vh !important;
+	}
+	
+	@media screen and (max-width: 768px) {
+		#homepage_main_image {
+			padding: 0 0 !important;
+		}
 	}
 	
 	@media screen and (max-width: 768px) {
 		#homepage_main_image > div.et_pb_row.et_pb_row_0.et_had_animation {
 			margin-top: inherit !important;
 		}
+		
+		#homepage_main_image {
+			background-position: center !important
+		}
+	}
+	
+	
+	
+	
+	/* Deuxième image  */ 
+	
+	
+	
+	
+	#homepage_diviser_container > div {
+		margin-top: 0 !important; 
+	}
+	
+	#homepage_diviser_container {
+		height: 50vh !important;
+		padding-top: 10% !important;
 	}
 
 
@@ -121,8 +151,7 @@
 		border: 2px solid #fe0000 !important;
 		color: #fe0000 !important;
 	}
-
-
+	
 
 
 	/* dernière image */
@@ -174,6 +203,26 @@
 		-ms-transform: scaleX(0.7);
 		font-weight: bold !important;
 	}
+	
+	#homepage_urinoire_button {
+		position: absolute;
+		width: 450px !important;
+		left: 50%; 
+		bottom: -90px; 
+		transform: translate(-50%, 0); 
+		-webkit-transform: translate(-50%, 0);  
+		-o-transform: translate(-50%, 0);   
+		-moz-transform: translate(-50%, 0); 
+		-ms-transform: translate(-50%, 0); 
+		z-index: 1; 
+	}
+	
+	@media screen and (max-width: 1280px) {
+		#homepage_urinoire_button {
+			bottom: -80px; 
+			z-index: 1; 
+		}
+	}
 
 	@media screen and (max-width: 1075px) {
 
@@ -206,6 +255,13 @@
 		#homepage_urinoire p::after {
 			font-size: 3em !important;
 			right: -6.5% !important;
+		}
+	}
+	
+	@media screen and (max-width: 768px) {
+		#homepage_urinoire_button {
+			bottom: -80px; 
+			width: 300px !important;
 		}
 	}
 
@@ -245,8 +301,78 @@
 			bottom: 30% !important;
 		}
 	}
+	
+	
+	
+	
+	/* dual photo */ 
+	
+	
+	
+	
+	.homepage_dual_photo_button {
+		position: absolute !important;
+		left: 50% !important; 
+		bottom: 5% !important;
+		z-index: 100  !important;
+		width: 80% !important; 
+		display: flex  !important; 
+		align-content: center  !important; 
+		justify-content: center  !important; 
+		align-items: center  !important; 
+		padding: 10px;
+		white-space: nowrap !important; 
 
-
+		transform: translate(-50%, 0);
+		-webkit-transform: translate(-50%, 0);
+		-o-transform: translate(-50%, 0);
+		-moz-transform: translate(-50%, 0);
+		-ms-transform: translate(-50%, 0);
+	}
+	
+	.homepage_dual_photo_child {
+		max-width: 600px !important;
+		margin-left: auto !important; 
+		margin-right: auto !important;
+	}
+	
+	@media screen and (max-width: 981px) {
+		.homepage_dual_photo_button {
+			max-width: 400px !important; 
+		}
+		
+		.homepage_dual_photo_button {
+			position: absolute !important;
+			bottom: 10% !important;
+		}
+	}
+	
+	@media screen and (max-width: 530px) {
+		.homepage_dual_photo_button {
+			white-space: inherit !important; 
+			bottom: 8% !important;
+		}
+	
+		#homepage_dual_photo_container {
+			width: 100% !important;
+		}
+		
+		#homepage_dual_photo_container > div.et_pb_column.et_pb_column_1_2.et_pb_column_9.et_pb_css_mix_blend_mode_passthrough {
+			width: 100% !important;
+		}
+	}
+	
+	@media screen and (max-width: 400px) {
+		
+		#homepage_dual_photo_container > div.et_pb_column.et_pb_column_1_2.et_pb_column_9.et_pb_css_mix_blend_mode_passthrough > div.et_pb_module.et_pb_text.et_pb_text_11.homepage_dual_photo_child.et_pb_text_align_center.et_pb_bg_layout_light, #homepage_dual_photo_container > div.et_pb_column.et_pb_column_1_2.et_pb_column_10.et_pb_css_mix_blend_mode_passthrough.et-last-child > div.et_pb_module.et_pb_text.et_pb_text_12.homepage_dual_photo_child.et_pb_text_align_center.et_pb_bg_layout_light {
+			padding-top: 10vh !important;
+			padding-bottom: 20vh !important;
+		}
+		
+	}
+	
+	
+	
 
 	/******************/
 	/***** Footer *****/
@@ -484,6 +610,7 @@
 		font-weight: bold;
 		text-align: center;
 	}
+	
 
 
 
@@ -776,10 +903,6 @@
 			-ms-transform: translate(-50%, 0);
 			transform: translate(-50%, 0);
 		}
-
-		#et-boc > div > div > div.et_pb_with_border.et_pb_section.et_pb_section_1.et_pb_with_background.et_section_regular > div.et_pb_row.et_pb_row_1 {
-			padding-top: 50px !important;
-		}
 	}
 
 	@media screen and (max-width: 660px) {
@@ -800,9 +923,6 @@
 			bottom: -80px;
 		}
 
-		#et-boc > div > div > div.et_pb_with_border.et_pb_section.et_pb_section_1.et_pb_with_background.et_section_regular > div.et_pb_row.et_pb_row_1 {
-			padding-top: 80px !important;
-		}
 	}
 
 
