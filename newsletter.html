@@ -1,43 +1,74 @@
 <center>
  
   
-    <p>
-        <input type="email" name="EMAIL" id="email" required />
-    </p>
+  <p>
+      <input 
+         type="email" 
+         name="EMAIL" 
+         id="email" 
+         pattern="[A-Za-z0-9._%+-]{3,}@[a-zA-Z]{3,}([.]{1}[a-zA-Z]{2,}|[.]{1}[a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,})" 
+         required 
+       />
+  </p>
+  
+  <br />
+  
+  <p>
+      <label>
+          <input name="AGREE_TO_TERMS" type="checkbox" value="1" required> 
+            <a href="https://madamepee.com/mentions-legales/" target="_blank">
+              <span id="policy"></span>
+            </a>
+      </label>
+  </p>
+  
+  <p>
+      <br />
     
-    <br />
+      <input type="submit" value="ENVOYER" id="send" />
+  </p>
     
-    <p>
-        <label>
-            <input name="AGREE_TO_TERMS" type="checkbox" value="1" required> 
-              <a href="https://madamepee.com/mentions-legales/" target="_blank">
-             	 <span id="policy"></span>
-              </a>
-        </label>
-    </p>
-    
-    <p>
-        <br />
-        <input type="submit" value="ENVOYER" id="send" />
-    </p>
+    <script>   
       
-      <script>
+      const regex = /^[ a-zâäàéèùêëîïôöçñ'-]+$/i
+      
+      function dynamicNewsletter() {
         
-        (function() {
-           if (document.getElementById('newsletter') !== null) {
-             
-            document.querySelector('#newsletter #email').placeholder = 'Adresse E-mail';
-            document.querySelector('#newsletter #policy').innerHTML = 'J\'ai lu et accepté la politique de confidentialité';
-            document.querySelector('#newsletter #send').value = 'ENVOYER';
-            
-          } else if (document.getElementById('newsletter_eng') !== null) {
-            
-            document.querySelector('#newsletter_eng #email').placeholder = 'Email';
-            document.querySelector('#newsletter_eng #policy').innerHTML = 'I have read and I accept the confidential policy';
-            document.querySelector('#newsletter_eng #send').value = 'SEND';
+           const frenchMail = 'Adresse E-mail';
+          const frenchRead = 'J\'ai lu et accepté la politique de confidentialité';
+          const frenchSend = 'ENVOYER';
+          const englishMail = 'Email';
+          const englishRead = 'I have read and I accept the confidential policy';
+          const englishSend = 'SEND';
+          
+          if (document.getElementById('newsletter') !== null) {
+
+              if (regex.test(frenchMail) === true) {
+                document.querySelector('#newsletter #email').placeholder = frenchMail;
+              }
+              if (regex.test(frenchRead) === true) {
+                 document.querySelector('#newsletter #policy').innerHTML = frenchRead;
+              }
+              if (regex.test(frenchSend) === true) {
+                document.querySelector('#newsletter #send').value = frenchSend;
+              } 
+
+            } else if (document.getElementById('newsletter_eng') !== null) {
+
+              if (regex.test(englishMail) === true) {
+                document.querySelector('#newsletter_eng #email').placeholder = englishMail;
+              }
+              if (regex.test(englishRead) === true) {
+                 document.querySelector('#newsletter_eng #policy').innerHTML = englishRead;
+              }
+              if (regex.test(englishSend) === true) {
+                document.querySelector('#newsletter_eng #send').value = englishSend;
+              } 
           }   
-        })()
-    
-      </script>
+      }
       
+      dynamicNewsletter();
+  
+    </script>
+    
 </center>
